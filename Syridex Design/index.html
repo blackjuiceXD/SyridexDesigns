@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <v-content>
+            <header>
+                <div id="logo"></div>
+                <v-spacer></v-spacer>
+                <div class="pa-3" >
+                    <v-btn text class="btnhead hidden-xs-only">Forside</v-btn>
+                    <v-btn text class="btnhead hidden-xs-only">Portfolio</v-btn>
+                    <v-btn text class="btnhead hidden-xs-only">Kontakt</v-btn>
+                    <v-menu offset-y>
+                        <template v-slot:activator="{ on }">
+                            <v-app-bar-nav-icon
+                                    class="hidden-sm-and-up"
+                                    v-on="on"
+                            >
+
+                            </v-app-bar-nav-icon>
+                        </template>
+                        <v-list>
+                            <v-list-item
+                                    v-for="(item, index) in items"
+                                    :key="index"
+                                    @click=""
+                            >
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                </div>
+            </header>
+            <img src="asset/frontimage.png" id="frontImage">
+            <v-row style="height: 500px">
+                <v-col offset-md="1" md="4" cols="auto">
+                    <div class="frontbox">
+                        <v-card-title id="frontTitle">
+                            <h1>Hos Syridex Designs er kun det bedste godt nok.</h1>
+                        </v-card-title>
+                        <v-card-text id="frontspan">
+                            Syridex Designs arbejder altid i tæt kontakt med dig så du kan få lige præcis det du
+                            ønsker til din virksomhed.
+                            <br>
+                            Vi stopper ikke før vi har opnået et tilfredsstillende resultat for din virksomhed uden
+                            ekstra omkostninger.
+                        </v-card-text>
+                    </div>
+                </v-col>
+                <v-col offset-md="2" md="3">
+                    <div class="frontbox">
+                        <v-card-text class="buzzwords hidden-sm-and-down">
+                            Godt Design
+                        </v-card-text>
+                        <v-card-text class="buzzwords  hidden-sm-and-down">
+                            Kreative løsninger
+                        </v-card-text>
+                        <v-card-text class="buzzwords  hidden-sm-and-down">
+                            Fleksibilitet
+                        </v-card-text>
+                    </div>
+                </v-col>
+            </v-row>
+
+            <v-row id="colorarea">
+                <v-col md="4">
+                    <v-card :elevation="24" class="tilbudcard">
+                        <v-card-title class="tilbudtitle">
+                            <h2>Grafisk design</h2>
+                            <div class="line1"></div>
+                        </v-card-title>
+
+                        <v-card-text raised class="tilbudtexts">
+                            Syridex Designs kan hjælpe med alt der hedder grafisk design, hvis du har ideen
+                            så kan vi realisere den, og vi vil være i kontakt under hele processen.
+                        </v-card-text>
+                        <div class="midicon" >
+                            <img class="icon" src="asset/grapic-icon2.svg" alt="">
+                        </div>
+                    </v-card>
+                </v-col>
+                <v-col md="4">
+                    <v-card :elevation="24" class="tilbudcard">
+                        <v-card-title class="tilbudtitle">
+                            <h2>Print/Tryk</h2>
+                            <div class="line1"></div>
+                        </v-card-title>
+
+                        <v-card-text class="tilbudtexts">
+                            Hvis i ønsker et design på tekstil er det også noget vi kan hjælpe med, vi tilbyder
+                            pakkeløsninger med design og
+                            tryk hvis det er noget som er ønsket så i ikke behøver at gå til forskellige forhandlere,
+                            men kan klare det hele med os.
+                        </v-card-text>
+                        <div class="midicon2" >
+                        <img class="icon" src="asset/tryk-icon2.svg" alt="">
+                        </div>
+                    </v-card>
+                </v-col>
+                <v-col md="4">
+                    <v-card :elevation="24" class="tilbudcard">
+                        <v-card-title class="tilbudtitle">
+                            <h2>Markedsføring</h2>
+                            <div class="line1"></div>
+                        </v-card-title>
+
+                        <v-card-text class="tilbudtexts">
+                            Syridex Designs hjælper dig med materialet du mangler til markedsføring af din virksomhed,
+                            hvad end det er flyers eller posters, hvad end du skal bruge kan vi klare for dig.
+                        </v-card-text>
+                        <div class="midicon">
+                        <img class="icon" src="asset/market-icon2.svg" alt="">
+                    </div>
+                    </v-card>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col md="6">
+                    <div style="padding:40px; margin-left: 15px">
+                        <v-card-title class="tilbudtitle">
+                            <h3>HVEM ER SYRIDEX DESIGNS </h3>
+                            <div class="line2"></div>
+                        </v-card-title>
+
+                        <v-card-text class="whotext">
+                            Syridex Designs består af kun 2 personer vi er en virksomhed med speciale i Grafisk design
+                            og print og har partnere som kan sørge for at vi får den bedst mulige kvalitet til
+                            det som lige netop du skal bruge. Gennem vores partnere har vi nu fået mulighed for at lave
+                            tryk også så hvis det er noget i har behov for, så laver vi en aftale om en
+                            pakkeløsning så i får både design og tryk. <br> <br>
+
+                            Syridex Designs går meget op i kundens behov og arbejder derfor i tæt kontakt med vores
+                            kunder for at opnå et produkt som er lige det som kunden ønsker,
+                            uden at det koster ekstra. <br><br>
+
+                            Vi har lige nu ikke noget kontor, men vi kan stadig sørge for forsendelse til hele landet
+                            uden problemer.
+                        </v-card-text>
+                    </div>
+                </v-col>
+                <v-col md="6" style="padding: 0">
+                    <v-img class="hidden-xs-only" position="center -1" id=profileImg src="asset/tobias-farve.jpg" alt=""></v-img>
+                    <v-img class="hidden-sm-and-up" position="center center" id=profileImg src="asset/tobias-farve.jpg" alt=""></v-img>
+                </v-col>
+            </v-row>
+
+            <footer>
+                <v-row id="footer">
+                    <v-col offset-md="1" md="2" >
+                        <p>TELEFON</p>
+                        <p>27 82 95 49</p>
+                    </v-col>
+                    <v-col offset-md="2" md="2" >
+                        <p>ADRESSE</p>
+                        <p>Hedeparken 23A <br>
+                            Ballerup, 2750</p>
+                    </v-col>
+                    <v-row>
+                    <v-col class="pad">
+                        <a target="_blank" href="https://www.facebook.com/SyridexDesigns/">
+                        <img class="links" src="asset/facebook.svg" alt="">
+                        </a>
+                    </v-col>
+                    <v-col  class="pad">
+                        <a target="_blank" href="https://www.linkedin.com/company/syridex-designs/">
+                        <img class="links" src="asset/linkedin-brands.svg" alt="">
+                        </a>
+                    </v-col>
+                    <v-col class="pad">
+                        <a target="_blank" href="https://www.instagram.com/syridex_designs/">
+                        <img class="links" src="asset/instagram-square-brands.svg" alt="" >
+                        </a>
+                    </v-col>
+                    </v-row>
+                </v-row>
+            </footer>
+
+        </v-content>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

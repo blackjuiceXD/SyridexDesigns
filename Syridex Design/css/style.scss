@@ -1,0 +1,365 @@
+$color: (
+        primary: #94D4E8,
+        secondary:#2D676F
+);
+$fontfam: 'Open Sans', sans-serif !important;
+
+
+/* forside */
+
+header {
+  background-color: map_get($color, primary);
+  height: 100px;
+  padding: 10px;
+  display: flex;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 3rem;
+  word-break: keep-all;
+  font-weight: bold !important;
+}
+
+h2 {
+  color: map_get($color, secondary);
+  text-align: center;
+  font-size: 36px;
+}
+
+h3 {
+  color: black;
+  font-size: 32px;
+}
+
+
+.v-application {
+  font-family: $fontfam;
+}
+
+
+.btnhead {
+  height: 52px !important;
+  font-size: 30px !important;
+  font-weight: bold;
+  color: map_get($color, secondary) !important;
+  text-transform: none;
+}
+
+.frontbox {
+  color: white;
+  position: relative;
+
+}
+
+.buzzwords {
+  font-size: 36px;
+  margin: 14px 0 70px 70px;
+  line-height: 2.375rem;
+  font-weight: bold;
+}
+
+.tilbudcard {
+  padding: 20px;
+  height: 100%;
+}
+
+.tilbudtitle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  word-break: keep-all;
+  text-align: center;
+}
+
+.line1 {
+  background: map_get($color, secondary);
+  width: 65%;
+  height: 3px;
+}
+
+
+.line2 {
+  background: black;
+  width: 80%;
+  height: 3px;
+}
+
+.tilbudtexts {
+  color: map_get($color, secondary) !important;
+  font-size: 22px;
+  text-align: center;
+  line-height: 2rem;
+
+}
+
+.whotext {
+  color: black;
+  font-size: 24px;
+}
+
+.links {
+  height: 70px;
+  width: 70px;
+}
+
+.pad {
+  padding: 30px;
+}
+
+.icon {
+  height: 100px;
+  width: 110px;
+}
+
+.midicon {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.midicon2 {
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#logo {
+  height: 70px;
+  width: 300px;
+  background-image: url("../asset/logo1.svg");
+  background-size: contain;
+  margin-left: 70px;
+  margin-top: 5px;
+}
+
+#frontImage {
+  width: 100%;
+  background-size: cover;
+  height: 500px;
+  position: absolute;
+  margin: 0;
+}
+
+#frontspan {
+  font-size: 24px;
+  line-height: 2.375rem;
+}
+
+#colorarea {
+  margin: 0 !important;
+  background-color: map_get($color, primary);
+
+  padding: 50px 20px;
+
+}
+
+#profileImg {
+  height: 550px;
+}
+
+#footer {
+  background-color: map_get($color, primary);
+}
+
+div p {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 5px !important;
+  text-shadow: 2px 2px #00000060;
+}
+
+div p:last-child {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1440px) {
+  #frontspan {
+    font-size: 22px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #frontspan {
+    font-size: 16px;
+  }
+
+  .buzzwords {
+    font-size: 24px;
+  }
+
+  .whotext {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+
+  .tilbudtexts {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .btnhead {
+    height: 52px !important;
+    font-size: 20px !important;
+  }
+
+  #logo {
+    height: 60px;
+    width: 200px;
+    background-size: cover;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  div p {
+    font-size: 18px;
+  }
+
+  div p:last-child {
+    font-size: 14px;
+  }
+
+  .links {
+    height: 50px;
+    width: 50px;
+  }
+
+  #footer {
+    padding: 20px 30px 20px 50px;
+  }
+}
+
+
+@media only screen and (max-width: 340px) {
+  .pad {
+    padding: 10px;
+  }
+}
+
+
+/* kontakt */
+
+.line3
+{
+  background: black;
+  width: 80%;
+  height: 3px;
+  margin-left: 16px;
+}
+
+.konOp
+{
+  padding-bottom: 0;
+}
+
+.subtitle
+{
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.subtext
+{
+  font-size: 28px;
+  line-height: 2rem;
+}
+
+#btnsend
+{
+  background-color: map_get($color, secondary);
+  color: white;
+  height: 48px;
+  min-width: 106px;
+  font-size: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* portfolio */
+
+.portimg
+{
+  height: 300px;
+  background-size: contain;
+}
+
+.cardmain
+{
+  height: 100%;
+  width: 80vw;
+}
+
+.cardTop
+{
+  width: 100%;
+  height: 70px;
+  background-color: map-get($color, primary);
+}
+
+.cardimg
+{
+  height: 55vh;
+  margin: 10px;
+}
+
+.carddic
+{
+  padding: 5px 20px;
+}
+
+.cardtext
+{
+  width: 70%;
+  margin-left: 10px;
+  padding-top: 0;
+  color: white;
+}
+.cardbtn
+{
+  background-color: white;
+  color: map_get($color, secondary);
+  margin-right: 20px;
+
+}
+
+.cardbottom
+{
+  background-color: map_get($color, secondary)
+}
+
+.headline
+{
+  margin-left: 10px;
+  padding-bottom: 8px;
+  color: white;
+  word-break: keep-all;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .cardtext {
+    width: 95%;
+  }
+}

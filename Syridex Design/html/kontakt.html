@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <v-content>
+            <header>
+                <div id="logo"></div>
+                <v-spacer></v-spacer>
+                <div class="pa-3">
+                    <v-btn text class="btnhead hidden-xs-only">Forside</v-btn>
+                    <v-btn text class="btnhead hidden-xs-only">Portfolio</v-btn>
+                    <v-btn text class="btnhead hidden-xs-only">Kontakt</v-btn>
+                    <v-menu offset-y>
+                        <template v-slot:activator="{ on }">
+                            <v-app-bar-nav-icon
+                                    class="hidden-sm-and-up"
+                                    v-on="on"
+                            ></v-app-bar-nav-icon>
+                        </template>
+                        <v-list>
+                            <v-list-item
+                                    v-for="(item, index) in items"
+                                    :key="index"
+                                    @click=""
+                            >
+                                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                </div>
+            </header>
+
+            <v-container>
+                <v-row>
+                    <v-col offset-md="1" md="5">
+                        <v-card-title class="konOp">
+                            <h1>KONTAKTOPLYSNINGER</h1>
+                        </v-card-title>
+                        <div class="line3"></div>
+                        <v-card-subtitle class="subtitle">
+                            Telefon
+                        </v-card-subtitle>
+                        <v-card-text class="subtext">
+                            Tobias Sandberg <br> 27 82 95 49
+                            <br> <br>
+                            Mikkel Ferrari <br> 27 84 65 42
+                        </v-card-text>
+
+                        <v-card-subtitle class="subtitle">
+                            Email
+                        </v-card-subtitle>
+                        <v-card-text class="subtext">
+                            Syridexds@gmail.com
+                        </v-card-text>
+
+                        <v-card-subtitle class="subtitle">
+                            Adresse
+                        </v-card-subtitle>
+                        <v-card-text class="subtext">
+                            Hedeparken 23A <br>
+                            Ballerup, 2750
+                        </v-card-text>
+
+                    </v-col>
+                    <v-col md="5">
+                        <v-card-title class="konOp">
+                            <h1>KONTAKT OS</h1>
+                        </v-card-title>
+                        <div class="line3"></div>
+                        <v-form style="margin: 16px " v-model="valid">
+                            <v-text-field class="field"
+                                          v-model="name"
+                                          :rules="nameRules"
+                                          label="Navn"
+                                          required
+                                          outlined
+                            ></v-text-field>
+                            <v-text-field class="field"
+                                          v-model="email"
+                                          :rules="emailRules"
+                                          label="E-mail"
+                                          required
+                                          outlined
+                            ></v-text-field>
+                            <v-text-field class="field"
+                                          v-model="telefon"
+                                          label="Telefon"
+                                          type="number"
+                                          :counter="8"
+                                          :rules="telefonRules"
+                                          required
+                                          outlined
+                            ></v-text-field>
+                            <v-textarea class="field"
+                                        name="input-7-1"
+                                        v-model="besked"
+                                        label="Besked"
+                                        :rules="beskedRules"
+                                        outlined
+                            ></v-textarea>
+                            <v-btn class="mr-4" id="btnsend" >Send</v-btn>
+                        </v-form>
+                    </v-col>
+                </v-row>
+            </v-container>
+
+            <footer>
+                <v-row id="footer">
+                    <v-col offset-md="1" md="2">
+                        <p>TELEFON</p>
+                        <p>27 82 95 49</p>
+                    </v-col>
+                    <v-col offset-md="2" md="2">
+                        <p>ADRESSE</p>
+                        <p>Hedeparken 23A <br>
+                            Ballerup, 2750</p>
+                    </v-col>
+                    <v-row>
+                        <v-col class="pad">
+                            <a target="_blank" href="https://www.facebook.com/SyridexDesigns/">
+                                <img class="links" src="asset/facebook.svg" alt="">
+                            </a>
+                        </v-col>
+                        <v-col class="pad">
+                            <a target="_blank" href="https://www.linkedin.com/company/syridex-designs/">
+                                <img class="links" src="asset/linkedin-brands.svg" alt="">
+                            </a>
+                        </v-col>
+                        <v-col class="pad">
+                            <a target="_blank" href="https://www.instagram.com/syridex_designs/">
+                                <img class="links" src="asset/instagram-square-brands.svg" alt="">
+                            </a>
+                        </v-col>
+                    </v-row>
+                </v-row>
+            </footer>
+
+        </v-content>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="../js/app.js"></script>
+</body>
